@@ -1,0 +1,173 @@
+/* Fuentes */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante para los títulos */  
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #a3a3a3;
+}
+
+/* Cabecera */
+header {
+    background: #2C2C2C;
+    color: white;
+    padding: 56px 0;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+header h1 {
+    font-size: 4em;
+    margin: 0;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.4em;
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+/* Estilo tarjeta para explorar productos */
+/* Estilo tarjeta para explorar productos */
+.product-exploration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    margin-top: 60px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Contenedor de la imagen */
+.product-img {
+    width: 100%; /* Ocupa toda la mitad */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    object-fit: cover; /* Para que la imagen no se distorsione */
+    object-position: center; /* Centra la imagen dentro de su contenedor */
+}
+
+/* Contenedor del texto */
+.product-info {
+    padding: 30px;
+    width: 50%;
+}
+
+/* Estilos del texto */
+.product-info h2 {
+    font-size: 2.5em;
+    color: #2C2C2C;
+    margin-bottom: 10px;
+}
+
+.product-info h3 {
+    font-size: 1.5em;
+    color: #FF9F00;
+    margin-bottom: 20px;
+}
+
+.product-info p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.cta {
+    background-color: #272727;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+.cta:hover {
+    background-color: #5a5a5a;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-info {
+        padding: 20px;
+        width: 100%;
+    }
+}
