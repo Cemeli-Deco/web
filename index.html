@@ -8,7 +8,10 @@
     <link rel="icon" href="./src/img/icon.png" type="image/png">
     <!-- Fuente más elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
     <!-- Enlazar el archivo CSS -->
     <link rel="stylesheet" href="./src/css/index.css">
 </head>
@@ -16,23 +19,27 @@
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="navbar-container">
-            <!-- Aquí cambiamos el texto por la imagen -->
             <a href="#" class="navbar-logo">
-                <img src="./src/img/icon.png" alt="Logo de Cemelí Deco" class="logo-img">
+                <img src="./src/img/icon.png" alt="Logo de Cemeli Deco" class="logo-img">
             </a>
+            <!-- Botón para menú móvil -->
+            <button class="navbar-toggle" aria-label="Abrir menú">
+                <span class="toggle-icon"></span>
+            </button>
             <ul class="navbar-links">
                 <li><a href="#">Inicio</a></li>
                 <li><a href="./src/pages/about.html">Sobre Nosotros</a></li>
-                <li><a href="#productos">Productos</a></li>    
-                <li><a href="#galeria">Preguntas frecuentes</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="./src/pages/products.html">Productos</a></li>
+                <li><a href="./src/pages/faq.html">Preguntas frecuentes</a></li>
+                <li><a href="./src/pages/contact.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
+    
 
     <!-- Cabecera -->
     <header id="home">
-        <h1>Cemelí Deco</h1>
+        <h1>Cemeli Deco</h1>
         <p>Transformamos el cemento en arte</p>
     </header>
 
@@ -43,9 +50,13 @@
             <div class="product-info">
                 <h2>Nuestros productos!</h2>
                 <p>Descubre cómo transformamos el cemento en piezas artísticas únicas para tu hogar. Cada uno de nuestros productos es personalizado y hecho a mano, con un toque de creatividad y diseño moderno.</p>
-                <a href="#productos" class="cta">Explorar productos</a>
+                <a href="./src/pages/products.html" class="cta">Explorar productos</a>
             </div>
         </div>
     </section>
+
+        <!-- Enlazar el archivo JS -->
+        <script src="./src/js/imgs-change.js"></script>
+        <script src="./src/js/navbar.js"></script>
 </body>
 </html>

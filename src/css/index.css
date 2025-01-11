@@ -1,6 +1,6 @@
 /* Fuentes */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #e6e6e6;
@@ -9,11 +9,12 @@ body {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif; /* Fuente elegante para los títulos */  
+    font-family: 'Montserrat', serif; /* Fuente elegante para los títulos */  
 }
 
 /* Barra de navegación */
 .navbar {
+    font-family: 'Montserrat', sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,9 +44,15 @@ h1 {
     object-fit: cover;
 }
 
+.logo-img:hover {
+    transform: scale(1.1); /* Escala la imagen a un 110% */
+    transition: transform 0.3s ease-in-out; /* Añade una transición suave */
+}
+
+
 .navbar-links {
     display: flex;
-    gap: 20px;
+    gap: 32px;
 }
 
 .navbar-links li {
@@ -54,21 +61,82 @@ h1 {
 
 .navbar-links a {
     text-decoration: none;
-    color: white;
+    color: rgb(192, 192, 192);
     font-size: 1.1em;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-    color: #a3a3a3;
+    color: #ffffff;
 }
+
+/* Ocultar el botón por defecto */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggle .toggle-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle .toggle-icon::before,
+.navbar-toggle .toggle-icon::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle .toggle-icon::before {
+    top: -8px;
+}
+
+.navbar-toggle .toggle-icon::after {
+    top: 8px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #333;
+        position: absolute;
+        top: 80%;
+        right: 0;
+        left: 0;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-links.show {
+        display: flex; /* Mostrar el menú al activar */
+    }
+
+    .navbar-toggle {
+        display: block; /* Mostrar el botón */
+    }
+}
+
 
 /* Cabecera */
 header {
     background: #2C2C2C;
     color: white;
-    padding: 56px 0;
+    padding: 36px 0;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin-top: 80px;
@@ -82,19 +150,19 @@ header h1 {
 }
 
 header p {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.4em;
     margin-top: 15px;
     font-weight: 300;
 }
 
 /* Estilo tarjeta para explorar productos */
-/* Estilo tarjeta para explorar productos */
 .product-exploration {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    margin-top: 60px;
+
 }
 
 .product-card {
@@ -114,10 +182,13 @@ header p {
     height: 100%; /* Ocupa toda la altura del contenedor */
     object-fit: cover; /* Para que la imagen no se distorsione */
     object-position: center; /* Centra la imagen dentro de su contenedor */
+    transition: opacity 0.46s ease-in-out;
 }
+
 
 /* Contenedor del texto */
 .product-info {
+    font-family: 'Lora', serif;
     padding: 30px;
     width: 50%;
 }

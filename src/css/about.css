@@ -1,59 +1,58 @@
-/* Estilo general de la página 'Sobre Nosotros' */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Cabecera de la página */
-header {
-    background: linear-gradient(45deg, #252525, #313131);
-    color: white;
-    padding: 120px 20px;
-    text-align: center;
-    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-size: 4em;
-    margin: 0;
-    letter-spacing: 6px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #bebebe; /* Naranja cálido */
-}
-
-header p {
-    font-size: 1.3em;
-    margin-top: 20px;
-    font-weight: 300;
-    font-style: italic;
-    color: #ddd;
-}
-
 /* Sección 'Sobre Nosotros' - Misión, Visión, Valores */
 .sobre-nosotros {
     padding: 80px 20px;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
-    margin-top: 60px;
+    background-color: #e0e0e0;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);  
     border-radius: 15px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    display: flex; /* Flexbox activado */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en caso de ser necesario */
+    gap: 30px; /* Espacio entre las tarjetas */
 }
 
+.info {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin: 0px 186px;
+    font-size: 0.72rem;
+    color: rgb(204, 204, 204);
+}
+
+/* Contenedor de cada tarjeta (Misión, Visión, Valores) */
+.sobre-nosotros-contenido {
+    flex: 1; /* Hace que las tarjetas tengan el mismo tamaño */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hacer que la tarjeta de 'Valores' sea más ancha y ocupe el 100% */
+.sobre-nosotros-contenido.valores {
+    flex-basis: 100%; /* Toma todo el ancho disponible */
+    max-width: 100%;
+    margin-top: 30px; /* Separación para que quede abajo de las otras tarjetas */
+}
+
+/* Estilo para los títulos de cada tarjeta */
 .sobre-nosotros-contenido h2 {
-    font-size: 2.8em;
+    font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
     font-weight: 600;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
+/* Estilo para el contenido dentro de las tarjetas */
 .sobre-nosotros-contenido p {
     font-size: 1.3em;
     color: #555;
@@ -64,6 +63,7 @@ header p {
     margin-right: auto;
 }
 
+/* Estilo para la lista de valores */
 .sobre-nosotros-contenido ul {
     list-style-type: none;
     padding: 0;
@@ -82,84 +82,33 @@ header p {
 }
 
 .sobre-nosotros-contenido li strong {
-    color: #1b1b1b; /* Naranja */
+    color: #66835d; /* Naranja para los valores */
 }
 
-/* Sección 'Sobre Cemelí Deco' */
-#emprendimiento {
-    background-color: #333;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    margin-top: 60px;
-    border-radius: 15px;
-    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.2);
+/* Estilo para las imágenes circulares al lado del título */
+.sobre-nosotros-contenido h2 img {
+    width: 50px; /* Tamaño de la imagen */
+    height: 50px; /* Asegura que la imagen sea cuadrada */
+    border-radius: 50%; /* Hace la imagen circular */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
 }
 
-#emprendimiento h2 {
-    font-size: 2.8em;
-    color: #FF9F00;
-    margin-bottom: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-#emprendimiento p {
-    font-size: 1.3em;
-    color: #ddd;
-    line-height: 1.8;
-    margin-top: 10px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Estilo para los botones o enlaces de llamada a la acción */
-.cta {
-    background-color: #FF9F00;
-    color: white;
-    padding: 18px 40px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1.2em;
-    display: inline-block;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-}
-
-.cta:hover {
-    background-color: #e68a00;
-    transform: translateY(-4px);
+.sobre-nosotros-contenido h2 img:hover {
+    transform: scale(1.1); /* Escala la imagen a un 110% */
+    transition: transform 0.3s ease-in-out; /* Añade una transición suave */
 }
 
 /* Media Queries para dispositivos pequeños */
 @media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
+    /* Para pantallas más pequeñas, las tarjetas se apilan verticalmente */
+    .sobre-nosotros {
+        flex-direction: column; /* Cambia de fila a columna */
+        gap: 20px; /* Menor espacio entre las tarjetas */
     }
 
-    header p {
-        font-size: 1.1em;
-    }
-
-    .sobre-nosotros-contenido h2 {
-        font-size: 2.2em;
-    }
-
-    .sobre-nosotros-contenido p {
-        font-size: 1.1em;
-    }
-
-    #emprendimiento h2 {
-        font-size: 2.2em;
-    }
-
-    #emprendimiento p {
-        font-size: 1.1em;
-    }
-
-    .cta {
-        font-size: 1.1em;
-        padding: 15px 30px;
+    /* Se asegura que todas las tarjetas tengan el mismo ancho en pantallas pequeñas */
+    .sobre-nosotros-contenido {
+        flex-basis: 100%;
+        max-width: 100%;
     }
 }
