@@ -62,15 +62,16 @@ header h1 {
 }
 
 .faq-item h3:hover {
-    color: #2264ac;
+    color: #093b64;
 }
 
 .faq-item p {
-    margin: 10px 0 0 0;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
+    background: #f3f3f3;
+    padding: 12px;
+    color: #258de2;
+    font-weight: bolder;
 }
+
 
 /* Animación para mostrar/ocultar respuestas */
 .faq-item p {

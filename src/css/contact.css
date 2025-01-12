@@ -41,6 +41,14 @@ body {
     color: #333;
 }
 
+.box h2:hover {
+    transform: scale(1.32); /* Escala la imagen a un 110% */
+    transition: transform 0.32s ease-in-out; /* Añade una transición suave */
+    color: #258de2;
+    font-weight: bolder;
+    cursor: default;
+}
+
 .box p {
     font-size: 1rem;
     color: #666;

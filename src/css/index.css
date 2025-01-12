@@ -13,6 +13,22 @@ h1 {
     font-family: 'Montserrat', serif; /* Fuente elegante para los títulos */  
 }
 
+
+h1:hover {
+    transform: scale(1.52); /* Escala la imagen a un 110% */
+    transition: transform 0.82s ease-in-out; /* Añade una transición suave */
+    cursor: default;
+    font-family: 'Roboto';
+}
+
+p:hover {
+    transform: scale(1.072); /* Escala la imagen a un 110% */
+    transition: transform 0.32s ease-in-out; /* Añade una transición suave */
+    cursor: default;
+    color: rgb(211, 211, 211);
+}
+
+
 /* Barra de navegación */
 .navbar {
     font-family: 'Montserrat', sans-serif;
@@ -46,7 +62,7 @@ h1 {
 }
 
 .logo-img:hover {
-    transform: scale(1.1); /* Escala la imagen a un 110% */
+    transform: scale(1.23); /* Escala la imagen a un 110% */
     transition: transform 0.3s ease-in-out; /* Añade una transición suave */
 }
 
@@ -130,8 +146,8 @@ h1 {
     .navbar-toggle {
         display: block; /* Mostrar el botón */
     }
-}
 
+}
 
 /* Cabecera */
 header {
@@ -166,6 +182,17 @@ header p {
 
 }
 
+.product-exploration div:hover {
+ cursor: default;
+ background: #f7f6f4; 
+ 
+}
+
+.product-exploration div p:hover {
+    color: #1d1d1d; 
+
+   }
+
 .product-card {
     display: flex;
     flex-direction: row;
@@ -186,6 +213,7 @@ header p {
     object-fit: cover; /* Asegura que la imagen se adapte al contenedor sin deformarse */
     object-position: center; /* Centra la imagen dentro de su contenedor */
     transition: opacity 0.46s ease-in-out;
+    border-radius: 10px;
 }
 
 
@@ -244,6 +272,8 @@ header p {
         padding: 20px;
         width: 100%;
     }
+
+
 }
 
 /* Estilo para la transición de desvanecimiento */
@@ -283,6 +313,12 @@ footer {
     max-width: 1200px; /* Limita el ancho máximo para mayor control */
     margin: 0 auto; /* Centra el contenido */
     padding: 0 20px; /* Añade espaciado a los lados */
+}
+
+.footer-content p:hover {
+    transform: scale(1.1); /* Escala la imagen a un 110% */
+    transition: transform 0.32s ease-in-out; /* Añade una transición suave */
+    cursor: default;
 }
 
 /* Estilos para los enlaces sociales */

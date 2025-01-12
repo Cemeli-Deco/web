@@ -85,6 +85,24 @@
     color: #66835d; /* Naranja para los valores */
 }
 
+
+.sobre-nosotros-contenido li:hover {
+    transform: scale(1.1);
+    transition: transform 0.72s ease-in-out; /* Añade una transición suave */
+    cursor: default;
+}
+
+.sobre-nosotros-contenido h2:hover {
+    transform: scale(1.05);
+    transition: transform 0.32s ease-in-out; /* Añade una transición suave */
+    cursor: default;
+}
+
+.sobre-nosotros-contenido:hover {
+   background-color: rgb(244, 255, 242);
+    cursor: default;
+}
+
 /* Estilo para las imágenes circulares al lado del título */
 .sobre-nosotros-contenido h2 img {
     width: 50px; /* Tamaño de la imagen */
