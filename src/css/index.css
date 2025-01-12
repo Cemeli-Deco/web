@@ -170,7 +170,7 @@ header p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4em;
     margin-top: 15px;
-    font-weight: 300;
+
 }
 
 /* Estilo tarjeta para explorar productos */
@@ -336,3 +336,4 @@ footer {
 .social-links a:hover {
     color: #1e90ff; /* Cambia el color al pasar el mouse */
 }
+
