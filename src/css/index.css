@@ -6,6 +6,7 @@ body {
     background-color: #e6e6e6;
     color: #333;
     line-height: 1.6;
+    overflow: hidden; /* Evita el desplazamiento mientras está ocurriendo la animación */
 }
 
 h1 {
@@ -174,13 +175,15 @@ header p {
     overflow: hidden;
     width: 90%;
     max-width: 1200px;
+    padding: 10px 20px;
 }
 
 /* Contenedor de la imagen */
 .product-img {
-    width: 100%; /* Ocupa toda la mitad */
-    height: 100%; /* Ocupa toda la altura del contenedor */
-    object-fit: cover; /* Para que la imagen no se distorsione */
+    margin-top: 30px;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 350px; /* Fijamos la altura para mantener el tamaño constante */
+    object-fit: cover; /* Asegura que la imagen se adapte al contenedor sin deformarse */
     object-position: center; /* Centra la imagen dentro de su contenedor */
     transition: opacity 0.46s ease-in-out;
 }
@@ -241,4 +244,59 @@ header p {
         padding: 20px;
         width: 100%;
     }
+}
+
+/* Estilo para la transición de desvanecimiento */
+body {
+    margin: 0;  /* Asegura que no haya márgenes no deseados */
+}
+
+/* Capa negra inicial que cubre toda la página */
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 9999; /* Asegura que cubra todo el contenido */
+    opacity: 1;
+    pointer-events: none; /* Asegura que no bloquee la interacción de la página */
+    transition: opacity 1s ease-out; /* Transición suave para desaparecer */
+}
+
+/* Una vez que se desvanece, la capa será invisible */
+#transition-overlay.hidden {
+    opacity: 0;
+}
+
+/* Estilos generales del footer */
+footer {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Color del texto */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centra el texto y contenido dentro del footer */
+}
+
+/* Contenido del footer centrado */
+.footer-content {
+    max-width: 1200px; /* Limita el ancho máximo para mayor control */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 0 20px; /* Añade espaciado a los lados */
+}
+
+/* Estilos para los enlaces sociales */
+.social-links {
+    margin-top: 10px; /* Espacio entre el texto y los enlaces */
+}
+
+.social-links a {
+    color: #fff; /* Color blanco para los enlaces */
+    margin: 0 10px; /* Espacio entre los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+.social-links a:hover {
+    color: #1e90ff; /* Cambia el color al pasar el mouse */
 }

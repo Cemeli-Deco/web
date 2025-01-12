@@ -6,22 +6,25 @@
     <meta name="description" content="Cemelí Deco - Decoración personalizada en cemento">
     <title>Productos</title>
     <link rel="icon" href="../img/icon.png" type="image/png">
+    <!-- Fuente más elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/product.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Capa de transición -->
+    <div id="transition-overlay"></div>
+
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="navbar-container">
             <a href="#" class="navbar-logo">
                 <img src="../img/icon.png" alt="Logo de Cemeli Deco" class="logo-img">
             </a>
-            <!-- Botón para menú móvil -->
             <button class="navbar-toggle" aria-label="Abrir menú">
                 <span class="toggle-icon"></span>
             </button>
@@ -34,16 +37,56 @@
             </ul>
         </div>
     </nav>
-
+    
     <!-- Cabecera -->
     <header>
-        <h1>Productos</h1>    
-
-        <div class="info">            
-            <p>En desarrollo...</p>
-          </div>
+        <h1>Productos</h1>
     </header>
 
+    <!-- Navegación de productos -->
+    <section class="nav_topics">
+        <ul>
+            <li><a href="#" data-category="lamparas">Lamparas</a></li>
+            <li><a href="#" data-category="utensilios">Utensilios</a></li>
+            <li><a href="#" data-category="adornos">Adornos</a></li>
+        </ul>
+    </section>
+
+    <!-- Galería de productos (se actualizará según la categoría) -->
+    <section class="gallery">
+        <div class="grid">
+            <!-- Las imágenes se actualizarán dinámicamente -->
+            <img src="../img/img_1.png" alt="Producto 1" class="gallery-img">
+            <img src="../img/img_2.png" alt="Producto 2" class="gallery-img">
+            <img src="../img/img_3.png" alt="Producto 3" class="gallery-img">
+        </div>
+    </section>
+
+    <!-- Modal para imágenes ampliadas -->
+    <div class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+    
+    <!-- Caja de redes sociales -->
+    <div class="box">
+        <h2>Puedes ver más contenido en nuestro Instagram:</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/cemelideco/" target="_blank">
+                <img src="../img/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Cemeli Deco.</p>
+        </div>
+    </footer>
+
+    <script src="../js/general.js"></script>
+    <script src="../js/products.js"></script>
     <script src="../js/navbar.js"></script>
 </body>
 </html>

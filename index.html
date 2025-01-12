@@ -14,8 +14,12 @@
 
     <!-- Enlazar el archivo CSS -->
     <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/snoweffect.css">
 </head>
 <body>
+    <!-- Capa de transición -->
+    <div id="transition-overlay"></div>
+
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="navbar-container">
@@ -40,8 +44,9 @@
     <!-- Cabecera -->
     <header id="home">
         <h1>Cemeli Deco</h1>
-        <p>Transformamos el cemento en arte</p>
+        <p><i>Transformamos el cemento en arte</i></p>
     </header>
+
 
     <!-- Tarjeta para explorar productos -->
     <section id="explorar" class="product-exploration">
@@ -49,14 +54,23 @@
             <img src="./src/img/img_1.png" alt="Imagen producto" class="product-img">
             <div class="product-info">
                 <h2>Nuestros productos!</h2>
-                <p>Descubre cómo transformamos el cemento en piezas artísticas únicas para tu hogar. Cada uno de nuestros productos es personalizado y hecho a mano, con un toque de creatividad y diseño moderno.</p>
+                <p>Cada uno de nuestros productos es personalizado y hecho a mano, con un toque de creatividad y diseño moderno.</p>
                 <a href="./src/pages/products.html" class="cta">Explorar productos</a>
             </div>
         </div>
     </section>
 
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Cemeli Deco.</p>
+        </div>
+    </footer>
+    
+
         <!-- Enlazar el archivo JS -->
+        <script src="./src/js/general.js"></script>
         <script src="./src/js/imgs-change.js"></script>
         <script src="./src/js/navbar.js"></script>
+        <script src="./src/js/snoweffect.js"></script>
 </body>
 </html>

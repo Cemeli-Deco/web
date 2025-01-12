@@ -1,0 +1,31 @@
+/* Estilos para el fondo del header */
+#home {
+    position: relative;
+    overflow: hidden;
+    background: #222; /* Fondo oscuro para resaltar la nieve */
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo para los copos de nieve */
+.snowflake {
+    position: absolute;
+    top: -50px; /* Iniciar un poco más abajo para evitar el bug */
+    color: white;
+    font-size: 12px; /* Tamaño base */
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+/* Animación para los copos de nieve */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
